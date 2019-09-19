@@ -1,0 +1,29 @@
+{
+  "name": "catstation",
+  "version": "0.0.1",
+  "description": "Fuel dispenser management system. Database class project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jairouriel1998/catstation.git"
+  },
+  "keywords": [
+    "gasoline",
+    "cat",
+    "cats",
+    "database"
+  ],
+  "author": "jairouriel1998",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jairouriel1998/catstation/issues"
+  },
+  "homepage": "https://github.com/jairouriel1998/catstation#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

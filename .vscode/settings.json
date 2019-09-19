@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": true,
+            "connectionTimeout": 30,
+            "database": "Master",
+            "dialect": "MSSQL",
+            "name": "sql_myconnection",
+            "password": "Jairo1998",
+            "port": 1433,
+            "server": "127.0.0.1",
+            "username": "sa"
+        },
+        {
+            "connectionTimeout": 30,
+            "database": "catstation_database",
+            "dialect": "MSSQL",
+            "name": "catstation_connect",
+            "password": "Jairo1998",
+            "port": 1433,
+            "server": "127.0.0.1",
+            "username": "sa"
+        }
+    ]
+}

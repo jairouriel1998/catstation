@@ -1,0 +1,52 @@
+<div class="container p-4"> 
+    <div class="row">
+        <div class="card-body text-right">
+            <a class="btn btn-success" href="/add">NUEVA VENTA</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Tipo combustible</th>
+                    <th scope="col">Litros vendidos</th>
+                    <th scope="col">Precio por litro</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Empleado</th>
+                    <th scope="col">No Dispensador</th>
+                    <th scope="col">Estación</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+               </tr>
+            </thead>
+            <tbody>
+                {{#each sales_list}}
+                <tr>
+                    <td>{{sale_code}}</td>
+                    <td>{{sale_datetime}}</td>
+                    <td>{{cis_fueltype}}</td>
+                    <td>{{sale_liters_sold}}</td>
+                    <td>{{cis_literfuelprice}}</td>
+                    <td>{{sale_amount}}</td>
+                    <td>{{emp_name}}</td>
+                    <td>{{dispenser_sale_code}}</td>
+                    <td>{{station_idname}}</td>
+                    <td>{{station_address}}</td>
+                    <td><a href="/sales/edit/{{sale_code}}" class="btn btn-info">editar</a></td>
+                    <td><a href="/sales/delete/{{sale_code}}" class="btn btn-danger">eliminar</a></td>
+                </tr>
+                {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                    <p>No se han registrado ventas.</p>
+                    <a href="/sales/add">Registrar una venta!</a>
+                </div>
+                </div>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

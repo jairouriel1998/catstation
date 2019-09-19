@@ -1,0 +1,40 @@
+<div class="container p-4"> 
+    <div class="row">
+        <div class="card-body text-right">
+            <a class="btn btn-success" href="users/add">NUEVO USUARIO</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Nombre de usuario</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+               </tr>
+            </thead>
+            <tbody>
+                {{#each users_list}}
+                <tr>
+                    <td>{{user_code}}</td>
+                    <td>{{user_name}}</td>
+                    <td>{{user_nickname}}</td>
+                    <td>{{user_type}}</td>
+                    <td><a href="/users/edit/{{user_code}}" class="btn btn-info">editar</a></td>
+                    <td><a href="/users/delete/{{user_code}}" class="btn btn-danger">eliminar</a></td>
+                </tr>
+                {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                    <p>No hay usuarios registrados.</p>
+                    <a href="/users/add">Registrar nuevo usuario!</a>
+                </div>
+                </div>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container p-4"> 
+    <div class="row">
+        <div class="card-body text-right">
+            <a class="btn btn-success" href="stations/add">NUEVA ESTACION</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">inicio de operaciones</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Registro de operaciones</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+               </tr>
+            </thead>
+            <tbody>
+                {{#each stations_list}}
+                <tr>
+                    <td>{{station_code}}</td>
+                    <td>{{station_idname}}</td>
+                    <td>{{station_startdate}}</td>
+                    <td>{{station_address}}</td>
+                    <td>{{station_operationlog}}</td>
+                    <td>{{station_city}}</td>
+                    <td>{{station_department}}</td>
+                    <td><a href="/stations/edit/{{station_code}}" class="btn btn-info">editar</a></td>
+                    <td><a href="/stations/delete/{{station_code}}" class="btn btn-danger">eliminar</a></td>
+                </tr>
+                {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                    <p>No se han registrado estaciones.</p>
+                    <a href="/stations/add">Registrar una estacion!</a>
+                </div>
+                </div>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

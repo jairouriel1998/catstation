@@ -1,0 +1,42 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header align-center">
+                    <h3 class="text-center">EDICION DE USUARIO</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/users/edit/{{user.user_code}}" method="POST">
+                        <div class="form-group">
+                            <label for="user_name">Nombre Completo</label>
+                            <input type="text" class="form-control" name="user_name" autofocus value="{{user.user_name}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_nickname">Nombre de Usuario</label>
+                            <input type="text" class="form-control" name="user_nickname" value="{{user.user_nickname}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="station_address">Contraseña</label>
+                            <input type="password" class="form-control" name="user_password" value="{{user.password}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_type">Tipo de usuario</label>
+                            <select class="form-control" name="user_type">
+                                <option value="user">Usuario común</option>
+                                <option value="admin">Administrador</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                GUARDAR
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-info btn-block" href="/users">CANCELAR</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header align-center">
+                    <h3 class="text-center">NUEVA ESTACIÓN</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/stations/add" method="POST">
+                        <div class="form-group">
+                            <label for="station_idname">Nombre de la estación</label>
+                            <input type="text" class="form-control" name="station_idname" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="station_startdate">Fecha de inicio de operaciones</label>
+                            <input type="date" class="form-control" name="station_startdate">
+                        </div>
+                        <div class="form-group">
+                            <label for="station_address">Dirección</label>
+                            <input type="text" class="form-control" name="station_address">
+                        </div>
+                        <div class="form-group">
+                            <label for="station_operationlog">Número de registro de operaciones</label>
+                            <input type="text" class="form-control" name="station_operationlog">
+                        </div>
+                        <div class="form-group">
+                            <label for="station_city">Ciudad de operación</label>
+                            <input type="text" class="form-control" name="station_city">
+                        </div>
+                        <div class="form-group">
+                            <label for="station_department">Departamento de operación</label>
+                            <input type="text" class="form-control" name="station_department">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                GUARDAR
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-info btn-block" href="/stations">CANCELAR</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
